@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const API_BASE = "https://library-management-system-y876.onrender.com";
-
+const API_BASE_URL = "https://library-management-system-y876.onrender.com";
 export default function App() {
   const [user, setUser] = useState(null);
   const [isSignUp, setIsSignUp] = useState(false);
@@ -17,7 +16,7 @@ export default function App() {
     e.preventDefault();
     const endpoint = isSignUp ? '/signup' : '/login';
     try {
-      const res = await fetch(`${API_BASE}${endpoint}`, {
+      const res = await fetch(`${API_BASE_URL}${endpoint}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(authData)
@@ -40,7 +39,7 @@ export default function App() {
   // Fetch all books
   const fetchBooks = async () => {
     try {
-      const res = await fetch(`${API_BASE}/books`);
+      const res = await fetch(`${API_BASE_URL}/books`);
       const data = await res.json();
       setBooks(data);
     } catch (err) {
@@ -56,7 +55,7 @@ export default function App() {
   const handleBookSubmit = async (e) => {
     e.preventDefault();
     const method = editingId ? 'PUT' : 'POST';
-    const url = editingId ? `${API_BASE}/books/${editingId}` : `${API_BASE}/books`;
+    const url = editingId ? `${API_BASE_URL}/books/${editingId}` : `${API_BASE_URL}/books`;
 
     try {
       const res = await fetch(url, {
