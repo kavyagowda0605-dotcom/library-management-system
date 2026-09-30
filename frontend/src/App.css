@@ -1,0 +1,16 @@
+* { box-sizing: border-box; font-family: sans-serif; margin: 0; padding: 0; }
+body { background: #f4f6f9; color: #333; }
+.container { max-width: 900px; margin: 30px auto; padding: 20px; background: white; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+.header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; border-bottom: 2px solid #eee; padding-bottom: 10px; }
+.auth-box { max-width: 350px; margin: 80px auto; padding: 25px; background: white; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); text-align: center; }
+.auth-box input, .form-grid input, .form-grid select { width: 100%; padding: 10px; margin: 6px 0; border: 1px solid #ccc; border-radius: 4px; }
+button { padding: 8px 14px; margin: 4px; background: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer; }
+button:hover { background: #0056b3; }
+button.secondary { background: #6c757d; }
+button.danger { background: #dc3545; }
+.form-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 10px; margin-bottom: 20px; }
+.search-bar { width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 4px; }
+table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+th { background-color: #007bff; color: white; }
+.switch-mode { margin-top: 15px; color: #007bff; cursor: pointer; font-size: 0.9em; }
